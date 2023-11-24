@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cfg_path=`find ~ -name "cfg_location.sh"`
-source $cfg_path
+source ./.github/workflows/cfg_location.sh
 
 # read coverage bar from config
 while IFS= read -r line

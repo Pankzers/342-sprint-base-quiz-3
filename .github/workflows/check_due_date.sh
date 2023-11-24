@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cfg_path=`find ~ -name "cfg_location.sh"`
-source $cfg_path
+source ./.github/workflows/cfg_location.sh
 
 while IFS= read -r line
 do
@@ -10,8 +9,8 @@ do
   fi
 done < "$cfg"
 
-filename=md.duedate
-wget $url -O $filename 
+filename=$(basename -- "$url")
+wget $url
 
 while IFS= read -r line
 do

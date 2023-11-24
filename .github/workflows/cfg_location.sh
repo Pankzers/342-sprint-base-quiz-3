@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cfg=`find ~ -name "backref.cfg"`
+cfg="./.github/workflows/backref.cfg"
